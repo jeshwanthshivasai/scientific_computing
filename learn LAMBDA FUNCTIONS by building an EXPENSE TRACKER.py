@@ -4,7 +4,8 @@ def print_expense(expenses):
     for expense in expenses:
         print(f"Amount: {expense["amount"]}, Category: {expense["category"]}")
 def total_expenses(expenses):
-    lambda expense: expense["amount"]
-test=lambda x: x*2
-print(sum(map(test, [2,3, 5, 8])))        
+    sum(map(lambda expense: expense["amount"], expenses))
+    return sum(map(lambda expense: expense["amount"], expenses))
+def filter_expenses_by_category(expenses, category):
+    lambda expense: expense['category'] == category
 expenses=[]
