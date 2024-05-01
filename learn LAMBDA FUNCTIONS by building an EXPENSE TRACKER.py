@@ -1,6 +1,6 @@
 def add_expense(expenses, amount, category):
     expenses.append({'amount': amount, 'category': category})
-def print_expense(expenses):
+def print_expenses(expenses):
     for expense in expenses:
         print(f"Amount: {expense["amount"]}, Category: {expense["category"]}")
 def total_expenses(expenses):
@@ -20,3 +20,8 @@ def main():
         choice = input('Enter your choice')
         if choice == '1':
             amount = float(input('Enter amount: '))
+            category = input('Enter category: ')
+            add_expense(expenses, amount, category)
+        elif choice == '2':
+            print('\nAll Expenses: ')
+            print_expenses(expenses)
